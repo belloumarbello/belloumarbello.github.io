@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bello Umar Bello | AI Researcher & Computer Scientist</title>
+
+    <meta name="description" content="Bello Umar Bello — Computer Scientist, AI Researcher, Educator, and Founder working on African Language AI, NLP, Generative AI, and intelligent systems.">
+
+    <meta name="author" content="Bello Umar Bello">
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        :root {
+            --bg: #07111f;
+            --bg-secondary: #0b1728;
+            --card: rgba(16, 31, 50, 0.72);
+            --card-solid: #0f1d30;
+            --text: #f4f7fb;
+            --muted: #9eafc3;
+            --primary: #5eead4;
+            --primary-dark: #14b8a6;
+            --blue: #60a5fa;
+            --border: rgba(255,255,255,0.09);
+            --shadow: 0 20px 60px rgba(0,0,0,0.28);
+            --radius: 20px;
+            --max-width: 1180px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(20,184,166,0.12), transparent 28%),
+                radial-gradient(circle at 90% 20%, rgba(96,165,250,0.12), transparent 30%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .container {
+            width: min(92%, var(--max-width));
+            margin: auto;
+        }
+
+        .section {
+            padding: 110px 0;
+            position: relative;
+        }
+
+        .section-label {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3.3rem);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .section-intro {
+            max-width: 700px;
+            color: var(--muted);
+            font-size: 1.05rem;
+            margin-bottom: 45px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(7,17,31,0.72);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.15rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-button {
+            border: 1px solid rgba(94,234,212,0.4);
+            padding: 9px 15px;
+            border-radius: 999px;
+            color: var(--primary) !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 0;
+            color: white;
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 13px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.035);
+            border-radius: 999px;
+            color: var(--primary);
+            font-size: 0.85rem;
+            margin-bottom: 24px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        .hero h1 {
+            font-size: clamp(3.2rem, 7vw, 6.5rem);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            margin-bottom: 25px;
+        }
+
+        .hero-subtitle {
+            color: var(--muted);
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            max-width: 680px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 13px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+            border: 1px solid var(--border);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #06201c;
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(94,234,212,0.2);
+        }
+
+        .btn-secondary {
+            color: var(--text);
+            background: rgba(255,255,255,0.035);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .hero-card {
+            position: relative;
+        }
+
+        .profile-orbit {
+            width: min(390px, 80vw);
+            height: min(390px, 80vw);
+            margin: auto;
+            border-radius: 50%;
+            border: 1px solid rgba(94,234,212,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background:
+                radial-gradient(circle, rgba(94,234,212,0.09), transparent 60%);
+            box-shadow: 0 0 100px rgba(94,234,212,0.08);
+        }
+
+        .profile-inner {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                linear-gradient(145deg, #102238, #07111f);
+            text-align: center;
+            padding: 30px;
+        }
+
+        .profile-initials {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: -4px;
+            background: linear-gradient(135deg, var(--primary), var(--blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .orbit-dot {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 25px var(--primary);
+        }
+
+        .orbit-one {
+            top: 15px;
+            left: 50%;
+        }
+
+        .orbit-two {
+            right: 20px;
+            bottom: 80px;
+            background: var(--blue);
+            box-shadow: 0 0 25px var(--blue);
+        }
+
+        .orbit-three {
+            left: 30px;
+            bottom: 70px;
+        }
+
+        /* =========================================================
+           STATS
+        ========================================================= */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 70px;
+        }
+
+        .stat {
+            padding: 22px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: rgba(255,255,255,0.025);
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .about-highlight {
+            padding: 35px;
+            border-radius: var(--radius);
+            background:
+                linear-gradient(145deg, rgba(94,234,212,0.08), rgba(96,165,250,0.04));
+            border: 1px solid var(--border);
+        }
+
+        .about-highlight h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .about-highlight p {
+            color: var(--muted);
+        }
+
+        .about-text p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        /* =========================================================
+           RESEARCH
+        ========================================================= */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .research-card {
+            padding: 30px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: 0.35s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(94,234,212,0.35);
+        }
+
+        .research-icon {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .research-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .research-card p {
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        /* =========================================================
+           PROJECTS
+        ========================================================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: 0.35s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(96,165,250,0.35);
+        }
+
+        .project-top {
+            height: 150px;
+            padding: 25px;
+            display: flex;
+            align-items: flex-end;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(94,234,212,0.18), transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(96,165,250,0.15), transparent 30%),
+                #0b1728;
+        }
+
+        .project-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.08);
+        }
+
+        .project-content {
+            padding: 28px;
+        }
+
+        .project-content h3 {
+            font-size: 1.35rem;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            font-size: 0.74rem;
+            padding: 5px 9px;
+            border-radius: 999px;
+            background: rgba(94,234,212,0.07);
+            color: var(--primary);
+            border: 1px solid rgba(94,234,212,0.12);
+        }
+
+        .project-link {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* =========================================================
+           AFRICANAAI FEATURE
+        ========================================================= */
+
+        .africana {
+            background:
+                linear-gradient(135deg,
+                    rgba(94,234,212,0.08),
+                    rgba(96,165,250,0.06));
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .africana-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .africana-title {
+            font-size: clamp(2.4rem, 5vw, 4.4rem);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .africana p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .vision-box {
+            padding: 35px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: rgba(0,0,0,0.15);
+        }
+
+        .vision-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .vision-box ul {
+            list-style: none;
+        }
+
+        .vision-box li {
+            color: var(--muted);
+            padding: 9px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .vision-box li:last-child {
+            border-bottom: 0;
+        }
+
+        /* =========================================================
+           TIMELINE
+        ========================================================= */
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 5px;
+            bottom: 5px;
+            width: 1px;
+            background: rgba(94,234,212,0.25);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 42px;
+            margin-bottom: 42px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 3px solid var(--primary);
+        }
+
+        .timeline-date {
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline-item h3 {
+            margin: 5px 0;
+            font-size: 1.3rem;
+        }
+
+        .timeline-item h4 {
+            color: var(--blue);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           PUBLICATIONS
+        ========================================================= */
+
+        .publication {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 25px;
+            padding: 28px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .publication-year {
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .publication h3 {
+            margin-bottom: 8px;
+        }
+
+        .publication p {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        /* =========================================================
+           SKILLS
+        ========================================================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-group {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: rgba(255,255,255,0.025);
+        }
+
+        .skill-group h3 {
+            margin-bottom: 18px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill {
+            padding: 7px 11px;
+            background: rgba(255,255,255,0.045);
+            color: var(--muted);
+            border-radius: 8px;
+            font-size: 0.82rem;
+        }
+
+        /* =========================================================
+           CERTIFICATIONS
+        ========================================================= */
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .cert {
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--card);
+        }
+
+        .cert small {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .cert h3 {
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+
+        .cert p {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact-box {
+            text-align: center;
+            padding: 75px 30px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            background:
+                radial-gradient(circle at center, rgba(94,234,212,0.08), transparent 55%);
+        }
+
+        .contact-box h2 {
+            font-size: clamp(2.2rem, 5vw, 4.5rem);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            color: var(--muted);
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .social {
+            padding: 10px 15px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--muted);
+            transition: 0.3s;
+        }
+
+        .social:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            padding: 35px 0;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* =========================================================
+           ANIMATIONS
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .floating {
+            animation: floating 5s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .hero-grid,
+            .about-grid,
+            .africana-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                order: -1;
+            }
+
+            .research-grid,
+            .skills-grid,
+            .cert-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .nav-links {
+                position: absolute;
+                top: 76px;
+                left: 0;
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 25px;
+                background: #07111f;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .research-grid,
+            .skills-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .publication {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header>
+    <div class="container">
+        <nav>
+
+            <a href="#home" class="logo">
+                Bello<span>.</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact" class="nav-button">Contact</a></li>
+            </ul>
+
+        </nav>
+    </div>
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+            <div class="reveal">
+
+                <div class="hero-kicker">
+                    <span class="status-dot"></span>
+                    Building AI for people, languages & society
+                </div>
+
+                <h1>
+                    Bello Umar<br>
+                    <span class="gradient-text">Bello.</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Computer Scientist, AI Researcher, Educator and Builder
+                    passionate about Artificial Intelligence, Natural Language
+                    Processing, Generative AI and African language technology.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        Explore My Work →
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Let's Connect
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card reveal floating">
+
+                <div class="profile-orbit">
+
+                    <span class="orbit-dot orbit-one"></span>
+                    <span class="orbit-dot orbit-two"></span>
+                    <span class="orbit-dot orbit-three"></span>
+
+                    <div class="profile-inner">
+
+                        <div>
+                            <div class="profile-initials">
+                                BUB
+                            </div>
+
+                            <p style="color: var(--muted); margin-top: 10px;">
+                                AI • NLP • Research
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="stats reveal">
+
+            <div class="stat">
+                <div class="stat-number">AI</div>
+                <div class="stat-label">Research & Development</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number">NLP</div>
+                <div class="stat-label">African Language Technology</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number">Edu</div>
+                <div class="stat-label">Teaching & Knowledge Sharing</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Ideas to Build</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="section" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-highlight reveal">
+
+                <div class="section-label">About Me</div>
+
+                <h3>
+                    Technology should speak to everyone.
+                </h3>
+
+                <p>
+                    My work sits at the intersection of Computer Science,
+                    Artificial Intelligence, language, education and
+                    innovation.
+                </p>
+
+            </div>
+
+
+            <div class="about-text reveal">
+
+                <div class="section-label">My Story</div>
+
+                <h2 class="section-title">
+                    From Computer Science to
+                    <span class="gradient-text">African AI.</span>
+                </h2>
+
+                <p>
+                    I am a Computer Scientist interested in building intelligent
+                    systems that solve meaningful problems. My interests span
+                    Artificial Intelligence, Machine Learning, Natural Language
+                    Processing, Generative AI, multimodal systems and emerging
+                    intelligent technologies.
+                </p>
+
+                <p>
+                    A major part of my work focuses on the representation of
+                    African languages in modern AI systems, with particular
+                    interest in Hausa. I am passionate about developing
+                    datasets, models, benchmarks and applications that make AI
+                    more useful and accessible to African communities.
+                </p>
+
+                <p>
+                    Beyond research, I enjoy teaching, building technology
+                    projects, creating educational content and exploring how
+                    emerging technologies can create opportunities across
+                    Africa.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RESEARCH
+========================================================= -->
+
+<section class="section" id="research">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">Research</div>
+
+            <h2 class="section-title">
+                Questions I'm trying to <span class="gradient-text">answer.</span>
+            </h2>
+
+            <p class="section-intro">
+                My research interests are centered around intelligent systems,
+                language technologies and the responsible application of AI
+                to real-world problems.
+            </p>
+
+        </div>
+
+
+        <div class="research-grid">
+
+            <div class="research-card reveal">
+                <div class="research-icon">🧠</div>
+                <h3>Artificial Intelligence</h3>
+                <p>
+                    Machine learning, generative models, intelligent systems
+                    and emerging AI architectures.
+                </p>
+            </div>
+
+            <div class="research-card reveal">
+                <div class="research-icon">🗣️</div>
+                <h3>Natural Language Processing</h3>
+                <p>
+                    Language understanding and generation, with emphasis on
+                    low-resource and African languages.
+                </p>
+            </div>
+
+            <div class="research-card reveal">
+                <div class="research-icon">🌍</div>
+                <h3>African Language AI</h3>
+                <p>
+                    Building datasets, benchmarks and models that improve the
+                    representation of African languages in AI.
+                </p>
+            </div>
+
+            <div class="research-card reveal">
+                <div class="research-icon">🤖</div>
+                <h3>Robotics</h3>
+                <p>
+                    Intelligent robotics, autonomous systems and the
+                    integration of AI with physical systems.
+                </p>
+            </div>
+
+            <div class="research-card reveal">
+                <div class="research-icon">📡</div>
+                <h3>IoT & Intelligent Systems</h3>
+                <p>
+                    Intelligent analysis of sensor data and the use of AI
+                    for connected systems.
+                </p>
+            </div>
+
+            <div class="research-card reveal">
+                <div class="research-icon">🏗️</div>
+                <h3>Digital Twins</h3>
+                <p>
+                    Exploring intelligent digital representations of real
+                    assets with LLM integration.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section class="section" id="projects">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">Selected Projects</div>
+
+            <h2 class="section-title">
+                Things I've <span class="gradient-text">built.</span>
+            </h2>
+
+            <p class="section-intro">
+                A selection of projects, experiments and initiatives across
+                AI, education, language technology and software development.
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+            <article class="project-card reveal">
+
+                <div class="project-top">
+                    <div class="project-number">01</div>
+                </div>
+
+                <div class="project-content">
+
+                    <h3>AfricanaAI</h3>
+
+                    <p>
+                        An AI initiative focused on developing Generative AI
+                        technologies for African languages and communities.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Generative AI</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Hausa</span>
+                        <span class="tag">LLMs</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="https://africanaai.com"
+                       target="_blank">
+                        Visit AfricanaAI →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card reveal">
+
+                <div class="project-top">
+                    <div class="project-number">02</div>
+                </div>
+
+                <div class="project-content">
+
+                    <h3>HausaGen</h3>
+
+                    <p>
+                        An exploration of Hausa-language text generation and
+                        AI-powered language technologies.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Hausa NLP</span>
+                        <span class="tag">LLMs</span>
+                        <span class="tag">Text Generation</span>
+                    </div>
+
+                    <a class="project-link" href="#africanaai">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card reveal">
+
+                <div class="project-top">
+                    <div class="project-number">03</div>
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Littafin Fasaha</h3>
+
+                    <p>
+                        A Hausa-language technology education initiative designed
+                        to make Computer Science and programming more accessible.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Education</span>
+                        <span class="tag">Hausa</span>
+                        <span class="tag">Python</span>
+                    </div>
+
+                    <a class="project-link" href="#teaching">
+                        Explore Education Work →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card reveal">
+
+                <div class="project-top">
+                    <div class="project-number">04</div>
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Online Complaint Management System</h3>
+
+                    <p>
+                        A web-based system developed to help students register,
+                        organize and submit programming-course complaints.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Web Development</span>
+                        <span class="tag">Computer Science</span>
+                        <span class="tag">Education</span>
+                    </div>
+
+                    <a class="project-link" href="#contact">
+                        Research Background →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     AFRICANAAI
+========================================================= -->
+
+<section class="section africana" id="africanaai">
+
+    <div class="container">
+
+        <div class="africana-grid">
+
+            <div class="reveal">
+
+                <div class="section-label">Founder / Builder</div>
+
+                <h2 class="africana-title">
+                    Building AI that
+                    <span class="gradient-text">speaks Africa.</span>
+                </h2>
+
+                <p>
+                    AfricanaAI is one of my major technology initiatives,
+                    exploring how Generative AI can better support African
+                    languages through text, speech, images, video and other
+                    modalities.
+                </p>
+
+                <a href="https://africanaai.com"
+                   target="_blank"
+                   class="btn btn-primary">
+                    Explore AfricanaAI →
+                </a>
+
+            </div>
+
+
+            <div class="vision-box reveal">
+
+                <h3>The Vision</h3>
+
+                <ul>
+                    <li>→ African language datasets</li>
+                    <li>→ Hausa NLP and language models</li>
+                    <li>→ Text generation</li>
+                    <li>→ Speech and text-to-audio</li>
+                    <li>→ Multimodal Generative AI</li>
+                    <li>→ AI education in African languages</li>
+                    <li>→ Technology infrastructure for AI research</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section class="section" id="experience">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">Experience</div>
+
+            <h2 class="section-title">
+                Where I've <span class="gradient-text">worked.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item reveal">
+
+                <span class="timeline-dot"></span>
+
+                <div class="timeline-date">
+                    Current
+                </div>
+
+                <h3>Graduate Assistant — Computer Science</h3>
+
+                <h4>Federal University of Technology Babura</h4>
+
+                <p>
+                    Teaching Computer Science, supporting students, coordinating
+                    academic activities and engaging in research and technology
+                    development.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <span class="timeline-dot"></span>
+
+                <div class="timeline-date">
+                    Professional Experience
+                </div>
+
+                <h3>Web Development</h3>
+
+                <h4>ABI Business Consult</h4>
+
+                <p>
+                    Working on web development and digital technology solutions
+                    for practical business needs.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <span class="timeline-dot"></span>
+
+                <div class="timeline-date">
+                    Internship
+                </div>
+
+                <h3>Machine Learning Intern</h3>
+
+                <h4>Saiket Systems</h4>
+
+                <p>
+                    Gained practical experience working with machine learning
+                    concepts and applied AI workflows.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <span class="timeline-dot"></span>
+
+                <div class="timeline-date">
+                    Internship
+                </div>
+
+                <h3>Junior Web Developer</h3>
+
+                <h4>Proxy Software Systems</h4>
+
+                <p>
+                    Worked on web development and software-related tasks while
+                    building practical engineering experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PUBLICATIONS
+========================================================= -->
+
+<section class="section" id="publications">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">Research & Publications</div>
+
+            <h2 class="section-title">
+                Ideas becoming <span class="gradient-text">knowledge.</span>
+            </h2>
+
+            <p class="section-intro">
+                Research papers, benchmarks and academic work. More
+                publications will be added as they are published.
+            </p>
+
+        </div>
+
+
+        <div class="publication reveal">
+
+            <div class="publication-year">
+                2026
+            </div>
+
+            <div>
+
+                <h3>
+                    Evaluating Large Language Models for Hausa Language
+                    Understanding and Generation: A Benchmark Study
+                </h3>
+
+                <p>
+                    Research exploring the capabilities of large language models
+                    for Hausa language understanding and generation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="publication reveal">
+
+            <div class="publication-year">
+                Research
+            </div>
+
+            <div>
+
+                <h3>
+                    African Language AI & Hausa NLP
+                </h3>
+
+                <p>
+                    Ongoing research and experimentation involving datasets,
+                    language models, translation, generation and evaluation
+                    for African languages.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EDUCATION
+========================================================= -->
+
+<section class="section" id="education">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">Education</div>
+
+            <h2 class="section-title">
+                My academic <span class="gradient-text">journey.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item reveal">
+
+                <span class="timeline-dot"></span>
+
+                <div class="timeline-date">
+                    2021
+                </div>
+
+                <h3>B.Sc. Computer Science</h3>
+
+                <h4>Bayero University Kano</h4>
+
+                <p>
+                    Graduated with a CGPA of 4.10/5.00. Final-year project:
+                    Design and Development of an Online Complaint Management
+                    System for Programming Courses.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <span class="timeline-dot"></span>
+
+                <div class="timeline-date">
+                    2017
+                </div>
+
+                <h3>National Diploma in Computer Science</h3>
+
+                <h4>Hassan Usman Katsina Polytechnic</h4>
+
+                <p>
+                    Completed with Upper Second Class.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <span class="timeline-dot"></span>
+
+                <div class="timeline-date">
+                    2013
+                </div>
+
+                <h3>Secondary Education</h3>
+
+                <h4>Government Science Secondary School Kankara</h4>
+
+                <p>
+                    Completed secondary education with a strong interest in
+                    science and technology.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TEACHING
+========================================================= -->
+
+<section class="section" id="teaching">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-highlight reveal">
+
+                <div class="section-label">Teaching</div>
+
+                <h3>
+                    Sharing knowledge in a language people understand.
+                </h3>
+
+                <p>
+                    I believe language should not be a barrier to learning
+                    Computer Science.
+                </p>
+
+            </div>
+
+
+            <div class="about-text reveal">
+
+                <h2 class="section-title">
+                    Computer Science
+                    <span class="gradient-text">in Hausa.</span>
+                </h2>
+
+                <p>
+                    Through my educational work, I explore ways of teaching
+                    programming and technology concepts in Hausa.
+                </p>
+
+                <p>
+                    One example is my 60-day Python programming learning
+                    initiative, designed to introduce programming concepts
+                    progressively to Hausa-speaking learners.
+                </p>
+
+                <p>
+                    This work connects my interests in education, NLP and
+                    African language technology.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section class="section" id="skills">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">Technical Skills</div>
+
+            <h2 class="section-title">
+                Tools I <span class="gradient-text">work with.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill-group reveal">
+
+                <h3>AI & Machine Learning</h3>
+
+                <div class="skill-list">
+                    <span class="skill">Python</span>
+                    <span class="skill">Machine Learning</span>
+                    <span class="skill">Deep Learning</span>
+                    <span class="skill">NLP</span>
+                    <span class="skill">LLMs</span>
+                    <span class="skill">Generative AI</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-group reveal">
+
+                <h3>Development</h3>
+
+                <div class="skill-list">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Flask</span>
+                    <span class="skill">WordPress</span>
+                    <span class="skill">Git</span>
+                    <span class="skill">GitHub</span>
+                </div>
+
+            </div>
+
+
+            <div class="skill-group reveal">
+
+                <h3>Research & Data</h3>
+
+                <div class="skill-list">
+                    <span class="skill">Data Science</span>
+                    <span class="skill">Pandas</span>
+                    <span class="skill">Datasets</span>
+                    <span class="skill">Model Evaluation</span>
+                    <span class="skill">Benchmarking</span>
+                    <span class="skill">Research Writing</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CERTIFICATIONS
+========================================================= -->
+
+<section class="section" id="certifications">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">Certifications</div>
+
+            <h2 class="section-title">
+                Continuous <span class="gradient-text">learning.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="cert-grid">
+
+            <div class="cert reveal">
+
+                <small>AWS</small>
+
+                <h3>
+                    Fundamentals of Machine Learning and AI
+                </h3>
+
+                <p>
+                    AWS Training & Certification
+                </p>
+
+            </div>
+
+
+            <div class="cert reveal">
+
+                <small>AWS AI</small>
+
+                <h3>
+                    AWS AI Practitioner Challenge
+                </h3>
+
+                <p>
+                    AI learning and practical challenge program.
+                </p>
+
+            </div>
+
+
+            <div class="cert reveal">
+
+                <small>NLP</small>
+
+                <h3>
+                    Natural Language Processing
+                </h3>
+
+                <p>
+                    Great Learning
+                </p>
+
+            </div>
+
+
+            <div class="cert reveal">
+
+                <small>Digital Entrepreneurship</small>
+
+                <h3>
+                    Professional Certificate of Digital Entrepreneurship
+                </h3>
+
+                <p>
+                    Passion View LTD
+                </p>
+
+            </div>
+
+
+            <div class="cert reveal">
+
+                <small>AI</small>
+
+                <h3>
+                    AI Builders — Responsible AI in Practice
+                </h3>
+
+                <p>
+                    AI Builders program
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="section" id="contact">
+
+    <div class="container">
+
+        <div class="contact-box reveal">
+
+            <div class="section-label">
+                Get In Touch
+            </div>
+
+            <h2>
+                Let's build something
+                <span class="gradient-text">meaningful.</span>
+            </h2>
+
+            <p>
+                I'm interested in research collaborations, AI projects,
+                African language technology, education, entrepreneurship and
+                opportunities to create meaningful technological impact.
+            </p>
+
+            <a href="mailto:YOUR_EMAIL@example.com"
+               class="btn btn-primary">
+                Send Me an Email →
+            </a>
+
+
+            <div class="socials">
+
+                <a class="social"
+                   href="https://github.com/belloumarbello"
+                   target="_blank">
+                    GitHub
+                </a>
+
+                <a class="social"
+                   href="https://www.linkedin.com"
+                   target="_blank">
+                    LinkedIn
+                </a>
+
+                <a class="social"
+                   href="https://africanaai.com"
+                   target="_blank">
+                    AfricanaAI
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <div>
+                © <span id="year"></span> Bello Umar Bello.
+                All rights reserved.
+            </div>
+
+            <div>
+                Built with curiosity, code & AI.
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+
+    // Close mobile menu after clicking a link
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+
+    });
+
+
+    // Reveal animations
+    const observer = new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+    document.querySelectorAll(".reveal").forEach(element => {
+        observer.observe(element);
+    });
+
+
+    // Current year
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
